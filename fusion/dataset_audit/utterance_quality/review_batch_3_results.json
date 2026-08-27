@@ -1,0 +1,100 @@
+{
+  "batch": 3,
+  "total_utterances": 10,
+  "overall_quality_score": 6,
+  "verdicts": [
+    {
+      "uid": 4552,
+      "verdict": "ISSUE",
+      "text_realistic": true,
+      "emotion_match": false,
+      "content_risk_match": true,
+      "inconsistencies": "Emotion 'panic' is too intense for the text; should be 'distress' or 'worry'.",
+      "recommended_emotion": "distress"
+    },
+    {
+      "uid": 2547,
+      "verdict": "ISSUE",
+      "text_realistic": true,
+      "emotion_match": true,
+      "content_risk_match": false,
+      "inconsistencies": "Content risk downgraded from high to mid; seizure with physical symptoms is high-risk.",
+      "recommended_content_risk": "high"
+    },
+    {
+      "uid": 3527,
+      "verdict": "ISSUE",
+      "text_realistic": true,
+      "emotion_match": true,
+      "content_risk_match": false,
+      "inconsistencies": "Content risk downgraded from mid to low; car in ditch with cold/wet conditions carries real risk.",
+      "recommended_content_risk": "mid"
+    },
+    {
+      "uid": 5514,
+      "verdict": "OK",
+      "text_realistic": true,
+      "emotion_match": true,
+      "content_risk_match": true,
+      "inconsistencies": null
+    },
+    {
+      "uid": 1674,
+      "verdict": "OK",
+      "text_realistic": true,
+      "emotion_match": true,
+      "content_risk_match": true,
+      "inconsistencies": null
+    },
+    {
+      "uid": 1519,
+      "verdict": "OK",
+      "text_realistic": true,
+      "emotion_match": true,
+      "content_risk_match": true,
+      "inconsistencies": null
+    },
+    {
+      "uid": 6224,
+      "verdict": "ISSUE",
+      "text_realistic": true,
+      "emotion_match": false,
+      "content_risk_match": false,
+      "inconsistencies": "Emotion 'panic' overshoots; 'fear' is more accurate. Content risk downgraded from high to mid; kidnapping is inherently high-risk.",
+      "recommended_emotion": "fear",
+      "recommended_content_risk": "high"
+    },
+    {
+      "uid": 1584,
+      "verdict": "OK",
+      "text_realistic": true,
+      "emotion_match": true,
+      "content_risk_match": true,
+      "inconsistencies": null
+    },
+    {
+      "uid": 5881,
+      "verdict": "ISSUE",
+      "text_realistic": true,
+      "emotion_match": true,
+      "content_risk_match": false,
+      "inconsistencies": "Content risk downgraded from mid to low; smoke/fire reports carry inherent risk.",
+      "recommended_content_risk": "mid"
+    },
+    {
+      "uid": 5635,
+      "verdict": "ISSUE",
+      "text_realistic": true,
+      "emotion_match": true,
+      "content_risk_match": false,
+      "inconsistencies": "Content risk downgraded from high to mid; a person collapsing unconscious is a serious medical emergency.",
+      "recommended_content_risk": "high"
+    }
+  ],
+  "patterns": {
+    "text_realism_rate": 1.0,
+    "emotion_accuracy": 0.8,
+    "content_risk_accuracy": 0.5,
+    "systematic_bias": "Model systematically underestimates content_risk, downgrading 5 of 6 flagged seeds."
+  }
+}

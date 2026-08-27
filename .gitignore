@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Environment
+.env
+*.env
+.claude/
+
+# Large downloadable assets - fetched by the code, not kept in the repo
+*.arpa
+*.arpa.gz
+app/models/
+models/backbone/
+*.wav
+*.flac
+
+# Training outputs
+runs/
+runs_ser/
+tmp/
+cache/
+cache_ser/
+marimo_asr_work/
+*.log
+
+# Local data trees. download_datasets.py writes corpora and label CSVs under
+# data/; nothing there belongs in the repo.
+data/
+
+# Local
+*.bak
+Thumbs.db
+desktop.ini

@@ -1,0 +1,60 @@
+<svg viewBox="0 0 980 300" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+<title>CLEAR full architecture with shared mHuBERT backbone</title>
+<defs>
+<marker id="a" markerWidth="8" markerHeight="8" refX="6.5" refY="3" orient="auto"><path d="M0,0 L6.5,3 L0,6 Z" fill="#64748b"/></marker>
+</defs>
+
+<text x="262" y="40" font-size="11" font-weight="700" fill="#64748b">VOICE — how it's said</text>
+<text x="262" y="282" font-size="11" font-weight="700" fill="#64748b">TEXT — what is said</text>
+
+<!-- audio -->
+<rect x="14" y="123" width="88" height="54" rx="8" fill="#f1f5f9" stroke="#94a3b8"/>
+<text x="58" y="147" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">Audio</text>
+<text x="58" y="163" text-anchor="middle" font-size="10" fill="#64748b">call</text>
+
+<!-- shared backbone -->
+<rect x="124" y="70" width="112" height="160" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.6"/>
+<text x="180" y="140" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">mHuBERT-147</text>
+<text x="180" y="158" text-anchor="middle" font-size="10.5" fill="#64748b">frozen backbone</text>
+<text x="180" y="173" text-anchor="middle" font-size="10.5" fill="#64748b">(shared)</text>
+
+<!-- voice branch -->
+<rect x="262" y="55" width="150" height="54" rx="8" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="337" y="79" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">SER  (LoRA + head)</text>
+<text x="337" y="95" text-anchor="middle" font-size="10.5" fill="#64748b">emotion → risk</text>
+
+<rect x="588" y="61" width="104" height="42" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+<text x="640" y="87" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">voice_risk</text>
+
+<!-- text branch -->
+<rect x="262" y="189" width="150" height="54" rx="8" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="337" y="213" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">ASR  (LoRA + CTC)</text>
+<text x="337" y="229" text-anchor="middle" font-size="10.5" fill="#64748b">speech → text</text>
+
+<rect x="440" y="189" width="120" height="54" rx="8" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="500" y="213" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">BERT</text>
+<text x="500" y="229" text-anchor="middle" font-size="10.5" fill="#64748b">content → risk</text>
+
+<rect x="588" y="197" width="104" height="42" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+<text x="640" y="223" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">text_risk</text>
+
+<!-- fusion + anomaly -->
+<rect x="730" y="123" width="112" height="54" rx="8" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="786" y="147" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">Mismatch?</text>
+<text x="786" y="163" text-anchor="middle" font-size="10.5" fill="#64748b">voice ≠ text</text>
+
+<rect x="858" y="123" width="108" height="54" rx="8" fill="#f1f5f9" stroke="#475569" stroke-width="1.6"/>
+<text x="912" y="147" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">Anomaly</text>
+<text x="912" y="163" text-anchor="middle" font-size="10.5" fill="#64748b">risk flag</text>
+
+<!-- arrows -->
+<path d="M102,150 L124,150" fill="none" stroke="#64748b" marker-end="url(#a)"/>
+<path d="M236,110 C250,95 250,86 262,82" fill="none" stroke="#64748b" marker-end="url(#a)"/>
+<path d="M236,190 C250,205 250,214 262,216" fill="none" stroke="#64748b" marker-end="url(#a)"/>
+<path d="M412,82 L588,82" fill="none" stroke="#64748b" marker-end="url(#a)"/>
+<path d="M412,216 L440,216" fill="none" stroke="#64748b" marker-end="url(#a)"/>
+<path d="M560,216 L588,217" fill="none" stroke="#64748b" marker-end="url(#a)"/>
+<path d="M692,82 C716,82 716,132 730,140" fill="none" stroke="#64748b" marker-end="url(#a)"/>
+<path d="M692,218 C716,218 716,168 730,160" fill="none" stroke="#64748b" marker-end="url(#a)"/>
+<path d="M842,150 L858,150" fill="none" stroke="#64748b" marker-end="url(#a)"/>
+</svg>

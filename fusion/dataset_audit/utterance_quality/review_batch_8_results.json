@@ -1,0 +1,26 @@
+{
+  "batch": "review_batch_8",
+  "overall_quality_score": 4,
+  "pass_rate": "30%",
+  "total": 10,
+  "ok": 3,
+  "issue": 7,
+  "verdicts": [
+    {"uid": 3752, "verdict": "ISSUE", "text_summary": "lock clicked... floor tilts sideways", "issues": ["content_risk inflated low→mid", "emotion off-target distress≠confusion", "spatial inconsistency: locked out yet indoors"]},
+    {"uid": 525, "verdict": "OK", "text_summary": "person on ground not moving", "issues": []},
+    {"uid": 5168, "verdict": "ISSUE", "text_summary": "dust everywhere, ceiling broken", "issues": ["content_risk downgraded high→mid for life-threatening collapse"]},
+    {"uid": 6572, "verdict": "OK", "text_summary": "report medical emergency", "issues": []},
+    {"uid": 4386, "verdict": "ISSUE", "text_summary": "send fire, smell burning", "issues": ["FATAL role inversion: dispatcher profile but caller-role text"]},
+    {"uid": 1084, "verdict": "ISSUE", "text_summary": "psychological state deteriorating", "issues": ["unrealistically clinical text for crisis profile", "content_risk inflated low→high", "emotion panic≠composed tone"]},
+    {"uid": 3456, "verdict": "ISSUE", "text_summary": "heavy gas pooling low", "issues": ["content_risk downgraded high→mid for hazmat gas"]},
+    {"uid": 9292, "verdict": "ISSUE", "text_summary": "estimated restoration time", "issues": ["severe profile/text mismatch: crisis vs utility inquiry", "content_risk inflated low→mid", "emotion distress≠flat text"]},
+    {"uid": 5155, "verdict": "ISSUE", "text_summary": "movement behind the truck", "issues": ["content_risk inflated mid→high for suspicious unconfirmed movement"]},
+    {"uid": 3483, "verdict": "OK", "text_summary": "guy not responding, soaked with blood", "issues": []}
+  ],
+  "failure_modes": {
+    "content_risk_mislabeling": {"count": 6, "affected": [3752, 5168, 1084, 3456, 9292, 5155], "note": "Bidirectional: inflates low risks AND deflates high risks"},
+    "profile_text_mismatch": {"count": 2, "affected": [4386, 9292], "note": "4386 is fatal: dispatcher role cannot be a caller"},
+    "unrealistic_register": {"count": 2, "affected": [1084, 9292], "note": "Clinical/bureaucratic language for crisis profiles"},
+    "emotion_mismatch": {"count": 3, "affected": [3752, 1084, 9292], "note": "Labels don't match actual text tone"}
+  }
+}

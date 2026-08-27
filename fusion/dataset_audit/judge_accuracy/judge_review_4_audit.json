@@ -1,0 +1,12 @@
+[
+  {"uid": 9047, "verdict": "CORRECT", "voice_risk_correct": true, "content_risk_correct": true, "anomaly_correct": true, "note": "Panic voice + life-threatening content converge. Normal is right."},
+  {"uid": 869, "verdict": "CORRECT", "voice_risk_correct": true, "content_risk_correct": true, "anomaly_correct": true, "note": "Mundane observation, calm voice. No anomaly."},
+  {"uid": 8337, "verdict": "WRONG", "voice_risk_correct": true, "content_risk_correct": false, "anomaly_correct": false, "note": "Lost wallet is low-content-risk, not mid. Judge overreads ID/cash mention. Should be low/low/normal, not mid/low/borderline."},
+  {"uid": 1895, "verdict": "CORRECT", "voice_risk_correct": true, "content_risk_correct": true, "anomaly_correct": true, "note": "Classic voice-content mismatch: professional dispatcher neutral voice vs choking emergency text."},
+  {"uid": 243, "verdict": "CORRECT", "voice_risk_correct": true, "content_risk_correct": true, "anomaly_correct": true, "note": "Low-stakes text, calm voice. Consistent."},
+  {"uid": 4595, "verdict": "CORRECT", "voice_risk_correct": true, "content_risk_correct": true, "anomaly_correct": true, "note": "Surface-level assessment correct. Missed deeper contextual anomaly (seizure caller discussing traffic)."},
+  {"uid": 216, "verdict": "CORRECT", "voice_risk_correct": true, "content_risk_correct": true, "anomaly_correct": true, "note": "Caller says 'I am perfectly safe' but sounds urgent. Textbook anomaly."},
+  {"uid": 6046, "verdict": "CORRECT", "voice_risk_correct": true, "content_risk_correct": true, "anomaly_correct": true, "note": "Panic voice + alarming content converge. Normal is right."},
+  {"uid": 8729, "verdict": "CORRECT", "voice_risk_correct": true, "content_risk_correct": true, "anomaly_correct": true, "note": "High urgency voice + high content risk converge. Normal is right."},
+  {"uid": 7447, "verdict": "BORDERLINE", "voice_risk_correct": true, "content_risk_correct": true, "anomaly_correct": false, "note": "Divergence exists but is mild. Child's confusion voice vs mid content risk is borderline, not a clear anomaly. Inconsistent with uid 8337 threshold."}
+]
